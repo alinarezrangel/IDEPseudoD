@@ -1,0 +1,35 @@
+# README.mkd
+## IDE PseudoD
+### ¿Que es IDE PseudoD?
+
+IDE PseudoD es la IDE oficial para el lenguaje de programación
+[PseudoD](http://www.pseudod.com/), con el soporte de las más recientes
+adiciones al lenguaje.
+
+### Caracteristicas
+
+* Resaltado de sintaxis.
+* Exportación a HTML.
+* Ejecución de un programa dentro de la IDE.
+* Edición multiple.
+* Soporte de PseudoD **2.0.0**.
+
+### Compilar
+
+IDE PseudoD esta diseñado con QtCreator, la mejor forma de compilar es
+abrir el proyecto con QtCreator y construirlo desde alli. Sin embargo,
+tambien puedes usar el Makefile generado por qmake para compilar la IDE.
+
+### Instalar
+
+El instalador de la IDE se encuentra en `tools/instaler-linux.sh`, debe ser
+ejecutado por un super-usuario(`root`) y se debe poseer soporte de Qt 4
+o superior en tu sistema.
+
+Actualmente no existe instalador para Windows o Mac OS X.
+
+### Ejecutar
+
+Despues de instalar la IDE, puedes abrirla con `tools/run-ide.sh`.
+
+

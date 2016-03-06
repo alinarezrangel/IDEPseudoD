@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>568</width>
+    <height>391</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="0" column="0">
+     <layout class="QVBoxLayout" name="verticalLayout">
+      <item>
+       <widget class="QTabWidget" name="tabWidget">
+        <property name="currentIndex">
+         <number>-1</number>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>568</width>
+     <height>29</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menu_Archivo">
+    <property name="title">
+     <string>&amp;Archivo</string>
+    </property>
+    <addaction name="action_Nuevo"/>
+    <addaction name="actionA_brir"/>
+    <addaction name="action_Guardar"/>
+    <addaction name="separator"/>
+    <addaction name="action_Ejecutar"/>
+   </widget>
+   <widget class="QMenu" name="menuC_orrector_Automatico">
+    <property name="title">
+     <string>C&amp;orrector Automatico</string>
+    </property>
+    <addaction name="action_Mostrar_sobe_el_archivo"/>
+   </widget>
+   <widget class="QMenu" name="menuO_pciones">
+    <property name="title">
+     <string>O&amp;pciones</string>
+    </property>
+    <addaction name="actionCon_vertir_a_HTML"/>
+   </widget>
+   <addaction name="menu_Archivo"/>
+   <addaction name="menuC_orrector_Automatico"/>
+   <addaction name="menuO_pciones"/>
+  </widget>
+  <widget class="QToolBar" name="mainToolBar">
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+  <action name="action_Nuevo">
+   <property name="text">
+    <string>&amp;Nuevo</string>
+   </property>
+  </action>
+  <action name="actionA_brir">
+   <property name="text">
+    <string>A&amp;brir</string>
+   </property>
+  </action>
+  <action name="action_Guardar">
+   <property name="text">
+    <string>&amp;Guardar</string>
+   </property>
+  </action>
+  <action name="action_Ejecutar">
+   <property name="text">
+    <string>&amp;Ejecutar</string>
+   </property>
+  </action>
+  <action name="action_Mostrar_sobe_el_archivo">
+   <property name="text">
+    <string>&amp;Mostrar sobre el archivo</string>
+   </property>
+  </action>
+  <action name="actionCon_vertir_a_HTML">
+   <property name="text">
+    <string>Con&amp;vertir a HTML</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources/>
+ <connections/>
+</ui>
