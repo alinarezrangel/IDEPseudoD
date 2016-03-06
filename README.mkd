@@ -32,4 +32,18 @@ Actualmente no existe instalador para Windows o Mac OS X.
 
 Despues de instalar la IDE, puedes abrirla con `tools/run-ide.sh`.
 
+### Advertencias y notas
 
+Es importante que cuando se ejecute el instalador, se encuentre en `tools/`,
+por lo tanto evite ejecutar el siguiente comando:
+
+`./tools/instaler-linux.sh`
+
+Y ejecute estos:
+
+```
+cd ./tools/
+sudo ./instaler-linux.sh
+```
+
+Puede reemplazar `sudo` por el comando de su preferencia.

@@ -13,7 +13,7 @@ public:
 int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
-    QPixmap pixmap("../Iconos/splash.png");
+    QPixmap pixmap("/usr/share/idepseudod/Iconos/splash.png");
     QSplashScreen splash(pixmap);
     splash.show();
     a.processEvents();

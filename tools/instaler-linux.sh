@@ -38,8 +38,8 @@ mkdir /usr/share/idepseudod/buffer/
 mkdir /usr/share/idepseudod/bin/
 mkdir /usr/share/idepseudod/tools/
 mkdir /usr/share/idepseudod/Iconos/
-cp ../Iconos/ /usr/share/idepseudod/Iconos/ -r
-cp ./ /usr/share/idepseudod/tools/ -r
+cp ../Iconos/* /usr/share/idepseudod/Iconos/ -r
+cp ./* /usr/share/idepseudod/tools/ -r
 touch /usr/share/idepseudod/buffer/Input.txt
 touch /usr/share/idepseudod/buffer/Output.txt
 
