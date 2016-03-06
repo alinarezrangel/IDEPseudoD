@@ -26,7 +26,7 @@ El instalador de la IDE se encuentra en `tools/instaler-linux.sh`, debe ser
 ejecutado por un super-usuario(`root`) y se debe poseer soporte de Qt 4
 o superior en tu sistema.
 
-Actualmente no existe instalador para Windows o Mac OS X.
+Actualmente no existe instalador para Windows o Mac OS X, pero puede ejecutar `./IDEPseudoD-build-desktop-Qt_4_8_2_in_PATH__System__Release/IDEPseudoD` para iniciar la IDE.
 
 ### Ejecutar
 
