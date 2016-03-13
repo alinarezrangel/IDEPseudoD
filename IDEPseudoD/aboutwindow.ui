@@ -1,29 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>ViewHTML</class>
- <widget class="QDialog" name="ViewHTML">
+ <class>AboutWindow</class>
+ <widget class="QDialog" name="AboutWindow">
   <property name="geometry">
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>614</width>
-    <height>545</height>
+    <width>400</width>
+    <height>300</height>
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Mostar HTML</string>
+   <string>Acerca de</string>
   </property>
   <widget class="QDialogButtonBox" name="buttonBox">
    <property name="geometry">
     <rect>
-     <x>520</x>
-     <y>10</y>
-     <width>81</width>
-     <height>241</height>
+     <x>30</x>
+     <y>240</y>
+     <width>341</width>
+     <height>32</height>
     </rect>
    </property>
    <property name="orientation">
-    <enum>Qt::Vertical</enum>
+    <enum>Qt::Horizontal</enum>
    </property>
    <property name="standardButtons">
     <set>QDialogButtonBox::Cancel|QDialogButtonBox::Ok</set>
@@ -32,37 +32,35 @@
   <widget class="QLabel" name="label">
    <property name="geometry">
     <rect>
-     <x>10</x>
-     <y>10</y>
-     <width>501</width>
-     <height>21</height>
+     <x>20</x>
+     <y>80</y>
+     <width>361</width>
+     <height>151</height>
     </rect>
    </property>
    <property name="text">
-    <string>Puedes usar esto en tus paginas HTML</string>
+    <string>IDE PseudoD es la IDE oficial de PseudoD, diseñada en Qt. Posee multiples caracteristicas como exportación a HTML, resaltado de sintaxis, entro otros.
+
+Creado por Alejandro Linarez Rangel, disponible en https://github.com/alinarezrangel/IDEPseudoD</string>
+   </property>
+   <property name="wordWrap">
+    <bool>true</bool>
    </property>
   </widget>
-  <widget class="QTextBrowser" name="textBrowser">
+  <widget class="QLabel" name="label_2">
    <property name="geometry">
     <rect>
-     <x>10</x>
+     <x>40</x>
      <y>30</y>
-     <width>501</width>
-     <height>501</height>
-    </rect>
-   </property>
-  </widget>
-  <widget class="QPushButton" name="pushButton">
-   <property name="geometry">
-    <rect>
-     <x>520</x>
-     <y>260</y>
-     <width>91</width>
-     <height>271</height>
+     <width>231</width>
+     <height>41</height>
     </rect>
    </property>
    <property name="text">
-    <string>copiar</string>
+    <string>Acerca de ...</string>
+   </property>
+   <property name="textFormat">
+    <enum>Qt::RichText</enum>
    </property>
   </widget>
  </widget>
@@ -71,7 +69,7 @@
   <connection>
    <sender>buttonBox</sender>
    <signal>accepted()</signal>
-   <receiver>ViewHTML</receiver>
+   <receiver>AboutWindow</receiver>
    <slot>accept()</slot>
    <hints>
     <hint type="sourcelabel">
@@ -87,7 +85,7 @@
   <connection>
    <sender>buttonBox</sender>
    <signal>rejected()</signal>
-   <receiver>ViewHTML</receiver>
+   <receiver>AboutWindow</receiver>
    <slot>reject()</slot>
    <hints>
     <hint type="sourcelabel">

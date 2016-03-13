@@ -10,8 +10,11 @@
     <height>498</height>
    </rect>
   </property>
+  <property name="focusPolicy">
+   <enum>Qt::NoFocus</enum>
+  </property>
   <property name="windowTitle">
-   <string>Dialog</string>
+   <string>Ejecutar archivo</string>
   </property>
   <widget class="QDialogButtonBox" name="buttonBox">
    <property name="geometry">

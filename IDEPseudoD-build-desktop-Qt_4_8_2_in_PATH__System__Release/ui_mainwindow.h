@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'mainwindow.ui'
 **
-** Created: Sun Feb 28 14:14:06 2016
+** Created: Sun Mar 13 15:18:36 2016
 **      by: Qt User Interface Compiler version 4.8.2
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
@@ -36,6 +36,7 @@ public:
     QAction *action_Ejecutar;
     QAction *action_Mostrar_sobe_el_archivo;
     QAction *actionCon_vertir_a_HTML;
+    QAction *actionA_cerca_de;
     QWidget *centralWidget;
     QGridLayout *gridLayout;
     QVBoxLayout *verticalLayout;
@@ -44,6 +45,7 @@ public:
     QMenu *menu_Archivo;
     QMenu *menuC_orrector_Automatico;
     QMenu *menuO_pciones;
+    QMenu *menuA_yuda;
     QToolBar *mainToolBar;
     QStatusBar *statusBar;
 
@@ -64,6 +66,8 @@ public:
         action_Mostrar_sobe_el_archivo->setObjectName(QString::fromUtf8("action_Mostrar_sobe_el_archivo"));
         actionCon_vertir_a_HTML = new QAction(MainWindow);
         actionCon_vertir_a_HTML->setObjectName(QString::fromUtf8("actionCon_vertir_a_HTML"));
+        actionA_cerca_de = new QAction(MainWindow);
+        actionA_cerca_de->setObjectName(QString::fromUtf8("actionA_cerca_de"));
         centralWidget = new QWidget(MainWindow);
         centralWidget->setObjectName(QString::fromUtf8("centralWidget"));
         gridLayout = new QGridLayout(centralWidget);
@@ -91,6 +95,8 @@ public:
         menuC_orrector_Automatico->setObjectName(QString::fromUtf8("menuC_orrector_Automatico"));
         menuO_pciones = new QMenu(menuBar);
         menuO_pciones->setObjectName(QString::fromUtf8("menuO_pciones"));
+        menuA_yuda = new QMenu(menuBar);
+        menuA_yuda->setObjectName(QString::fromUtf8("menuA_yuda"));
         MainWindow->setMenuBar(menuBar);
         mainToolBar = new QToolBar(MainWindow);
         mainToolBar->setObjectName(QString::fromUtf8("mainToolBar"));
@@ -102,6 +108,7 @@ public:
         menuBar->addAction(menu_Archivo->menuAction());
         menuBar->addAction(menuC_orrector_Automatico->menuAction());
         menuBar->addAction(menuO_pciones->menuAction());
+        menuBar->addAction(menuA_yuda->menuAction());
         menu_Archivo->addAction(action_Nuevo);
         menu_Archivo->addAction(actionA_brir);
         menu_Archivo->addAction(action_Guardar);
@@ -109,6 +116,7 @@ public:
         menu_Archivo->addAction(action_Ejecutar);
         menuC_orrector_Automatico->addAction(action_Mostrar_sobe_el_archivo);
         menuO_pciones->addAction(actionCon_vertir_a_HTML);
+        menuA_yuda->addAction(actionA_cerca_de);
 
         retranslateUi(MainWindow);
 
@@ -120,16 +128,18 @@ public:
 
     void retranslateUi(QMainWindow *MainWindow)
     {
-        MainWindow->setWindowTitle(QApplication::translate("MainWindow", "MainWindow", 0, QApplication::UnicodeUTF8));
+        MainWindow->setWindowTitle(QApplication::translate("MainWindow", "IDE PseudoD", 0, QApplication::UnicodeUTF8));
         action_Nuevo->setText(QApplication::translate("MainWindow", "&Nuevo", 0, QApplication::UnicodeUTF8));
         actionA_brir->setText(QApplication::translate("MainWindow", "A&brir", 0, QApplication::UnicodeUTF8));
         action_Guardar->setText(QApplication::translate("MainWindow", "&Guardar", 0, QApplication::UnicodeUTF8));
         action_Ejecutar->setText(QApplication::translate("MainWindow", "&Ejecutar", 0, QApplication::UnicodeUTF8));
         action_Mostrar_sobe_el_archivo->setText(QApplication::translate("MainWindow", "&Mostrar sobre el archivo", 0, QApplication::UnicodeUTF8));
         actionCon_vertir_a_HTML->setText(QApplication::translate("MainWindow", "Con&vertir a HTML", 0, QApplication::UnicodeUTF8));
+        actionA_cerca_de->setText(QApplication::translate("MainWindow", "A&cerca de", 0, QApplication::UnicodeUTF8));
         menu_Archivo->setTitle(QApplication::translate("MainWindow", "&Archivo", 0, QApplication::UnicodeUTF8));
         menuC_orrector_Automatico->setTitle(QApplication::translate("MainWindow", "C&orrector Automatico", 0, QApplication::UnicodeUTF8));
         menuO_pciones->setTitle(QApplication::translate("MainWindow", "O&pciones", 0, QApplication::UnicodeUTF8));
+        menuA_yuda->setTitle(QApplication::translate("MainWindow", "A&yuda", 0, QApplication::UnicodeUTF8));
     } // retranslateUi
 
 };

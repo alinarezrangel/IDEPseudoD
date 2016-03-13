@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'viewhtml.ui'
 **
-** Created: Sun Mar 6 15:12:01 2016
+** Created: Sun Mar 13 15:18:36 2016
 **      by: Qt User Interface Compiler version 4.8.2
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
@@ -60,7 +60,7 @@ public:
 
     void retranslateUi(QDialog *ViewHTML)
     {
-        ViewHTML->setWindowTitle(QApplication::translate("ViewHTML", "Dialog", 0, QApplication::UnicodeUTF8));
+        ViewHTML->setWindowTitle(QApplication::translate("ViewHTML", "Mostar HTML", 0, QApplication::UnicodeUTF8));
         label->setText(QApplication::translate("ViewHTML", "Puedes usar esto en tus paginas HTML", 0, QApplication::UnicodeUTF8));
         pushButton->setText(QApplication::translate("ViewHTML", "copiar", 0, QApplication::UnicodeUTF8));
     } // retranslateUi

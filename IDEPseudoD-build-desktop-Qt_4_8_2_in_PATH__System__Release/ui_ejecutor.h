@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'ejecutor.ui'
 **
-** Created: Mon Nov 23 20:09:42 2015
+** Created: Sun Mar 13 15:18:36 2016
 **      by: Qt User Interface Compiler version 4.8.2
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
@@ -45,6 +45,7 @@ public:
         if (ejecutor->objectName().isEmpty())
             ejecutor->setObjectName(QString::fromUtf8("ejecutor"));
         ejecutor->resize(890, 498);
+        ejecutor->setFocusPolicy(Qt::NoFocus);
         buttonBox = new QDialogButtonBox(ejecutor);
         buttonBox->setObjectName(QString::fromUtf8("buttonBox"));
         buttonBox->setGeometry(QRect(690, 450, 191, 32));
@@ -90,7 +91,7 @@ public:
 
     void retranslateUi(QDialog *ejecutor)
     {
-        ejecutor->setWindowTitle(QApplication::translate("ejecutor", "Dialog", 0, QApplication::UnicodeUTF8));
+        ejecutor->setWindowTitle(QApplication::translate("ejecutor", "Ejecutar archivo", 0, QApplication::UnicodeUTF8));
         label->setText(QApplication::translate("ejecutor", "Comando para ejecutar un terminal(opcional)", 0, QApplication::UnicodeUTF8));
         pushButton->setText(QApplication::translate("ejecutor", "ejecutar", 0, QApplication::UnicodeUTF8));
         label_2->setText(QApplication::translate("ejecutor", "Usar sistema de entrada/salida", 0, QApplication::UnicodeUTF8));

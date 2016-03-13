@@ -140,3 +140,9 @@ void MainWindow::on_actionCon_vertir_a_HTML_triggered()
     viewer->exec();
     delete viewer;
 }
+
+void MainWindow::on_actionA_cerca_de_triggered()
+{
+    AboutWindow about;
+    about.exec();
+}

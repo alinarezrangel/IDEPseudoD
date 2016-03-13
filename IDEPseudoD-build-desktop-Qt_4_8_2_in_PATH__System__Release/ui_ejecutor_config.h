@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'ejecutor_config.ui'
 **
-** Created: Sat Mar 5 14:25:31 2016
+** Created: Sun Mar 13 15:08:23 2016
 **      by: Qt User Interface Compiler version 4.8.2
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
@@ -35,6 +35,7 @@ public:
     QLabel *label_3;
     QLineEdit *lineEdit_3;
     QPushButton *pushButton_2;
+    QLabel *label_4;
 
     void setupUi(QDialog *ejecutor_config)
     {
@@ -70,6 +71,10 @@ public:
         pushButton_2 = new QPushButton(ejecutor_config);
         pushButton_2->setObjectName(QString::fromUtf8("pushButton_2"));
         pushButton_2->setGeometry(QRect(390, 190, 81, 31));
+        label_4 = new QLabel(ejecutor_config);
+        label_4->setObjectName(QString::fromUtf8("label_4"));
+        label_4->setGeometry(QRect(10, 70, 371, 51));
+        label_4->setWordWrap(true);
 
         retranslateUi(ejecutor_config);
         QObject::connect(buttonBox, SIGNAL(accepted()), ejecutor_config, SLOT(accept()));
@@ -85,10 +90,11 @@ public:
         lineEdit->setText(QApplication::translate("ejecutor_config", "/usr/share/idepseudod/buffer/Input.txt", 0, QApplication::UnicodeUTF8));
         pushButton->setText(QApplication::translate("ejecutor_config", "mostrar", 0, QApplication::UnicodeUTF8));
         label_2->setText(QApplication::translate("ejecutor_config", "Comando para ejecutar PseudoD", 0, QApplication::UnicodeUTF8));
-        lineEdit_2->setText(QApplication::translate("ejecutor_config", "/opt/pseudod/bin/ipdc -f %name%", 0, QApplication::UnicodeUTF8));
+        lineEdit_2->setText(QApplication::translate("ejecutor_config", "/opt/pseudod/bin/ipdc -f %file%", 0, QApplication::UnicodeUTF8));
         label_3->setText(QApplication::translate("ejecutor_config", "Archivo de salida", 0, QApplication::UnicodeUTF8));
         lineEdit_3->setText(QApplication::translate("ejecutor_config", "/usr/share/idepseudod/buffer/Output.txt", 0, QApplication::UnicodeUTF8));
         pushButton_2->setText(QApplication::translate("ejecutor_config", "mostrar", 0, QApplication::UnicodeUTF8));
+        label_4->setText(QApplication::translate("ejecutor_config", "Cada aparici\303\263n de <b>%file%</b> ser\303\241 reemplazada por el nombre del archivo", 0, QApplication::UnicodeUTF8));
     } // retranslateUi
 
 };

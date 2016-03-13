@@ -9,7 +9,7 @@ ejecutor::ejecutor(QString file, QWidget *parent) :
     this->file = file;
     this->fileIn = "/usr/share/idepseudod/buffer/Input.txt";
     this->fileOut = "/usr/share/idepseudod/buffer/Output.txt";
-    this->commandExec = "ipdc -f %file%";
+    this->commandExec = "/opt/pseudod/bin/ipdc -f %file%";
     this->args << "-f" << this->file;
 }
 

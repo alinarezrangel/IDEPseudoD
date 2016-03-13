@@ -11,7 +11,7 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>MainWindow</string>
+   <string>IDE PseudoD</string>
   </property>
   <widget class="QWidget" name="centralWidget">
    <layout class="QGridLayout" name="gridLayout">
@@ -59,9 +59,16 @@
     </property>
     <addaction name="actionCon_vertir_a_HTML"/>
    </widget>
+   <widget class="QMenu" name="menuA_yuda">
+    <property name="title">
+     <string>A&amp;yuda</string>
+    </property>
+    <addaction name="actionA_cerca_de"/>
+   </widget>
    <addaction name="menu_Archivo"/>
    <addaction name="menuC_orrector_Automatico"/>
    <addaction name="menuO_pciones"/>
+   <addaction name="menuA_yuda"/>
   </widget>
   <widget class="QToolBar" name="mainToolBar">
    <attribute name="toolBarArea">
@@ -100,6 +107,11 @@
   <action name="actionCon_vertir_a_HTML">
    <property name="text">
     <string>Con&amp;vertir a HTML</string>
+   </property>
+  </action>
+  <action name="actionA_cerca_de">
+   <property name="text">
+    <string>A&amp;cerca de</string>
    </property>
   </action>
  </widget>

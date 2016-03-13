@@ -12,6 +12,7 @@
 #include <QProcess>
 #include "viewhtml.h"
 #include <QThread>
+#include "aboutwindow.h"
 
 namespace Ui {
 class MainWindow;
@@ -39,6 +40,8 @@ private slots:
     void on_action_Mostrar_sobe_el_archivo_triggered();
 
     void on_actionCon_vertir_a_HTML_triggered();
+
+    void on_actionA_cerca_de_triggered();
 
 private:
     /*struct HighlighterTabs

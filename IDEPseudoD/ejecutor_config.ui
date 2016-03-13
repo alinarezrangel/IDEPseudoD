@@ -91,7 +91,7 @@
     </rect>
    </property>
    <property name="text">
-    <string>/opt/pseudod/bin/ipdc -f %name%</string>
+    <string>/opt/pseudod/bin/ipdc -f %file%</string>
    </property>
   </widget>
   <widget class="QLabel" name="label_3">
@@ -131,6 +131,22 @@
    </property>
    <property name="text">
     <string>mostrar</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_4">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>70</y>
+     <width>371</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Cada aparición de &lt;b&gt;%file%&lt;/b&gt; será reemplazada por el nombre del archivo</string>
+   </property>
+   <property name="wordWrap">
+    <bool>true</bool>
    </property>
   </widget>
  </widget>
