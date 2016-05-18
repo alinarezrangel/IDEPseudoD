@@ -6,10 +6,9 @@ InTabTextEdit::InTabTextEdit(QWidget *parent) :
     ui(new Ui::InTabTextEdit)
 {
     ui->setupUi(this);
-    highlight = new PseudoDSyntaxHighlighter(ui->textEdit->document());
+    //highlight = new PseudoDSyntaxHighlighter(ui->textEdit->document());
     hasChanged = false;
     fileName = "";
-    ui->textEdit->setFont(QFont("Monospace",11));
     this->filter = new MainEventFilter();
     //ui->textEdit->installEventFilter(this->filter);
     /*QPalette colors = ui->textEdit->palette();
@@ -20,9 +19,14 @@ InTabTextEdit::InTabTextEdit(QWidget *parent) :
 
 InTabTextEdit::~InTabTextEdit()
 {
-    delete highlight;
+    //delete highlight;
     delete filter;
     delete ui;
+}
+
+PseudoDSyntaxHighlighter* InTabTextEdit::getHighlighter(void)
+{
+    return this->ui->textEdit->getHighlighter();
 }
 
 void InTabTextEdit::on_textEdit_textChanged()

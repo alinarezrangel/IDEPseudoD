@@ -21,7 +21,8 @@ SOURCES += main.cpp\
     ejecutor_config.cpp \
     viewhtml.cpp \
     maineventfilter.cpp \
-    aboutwindow.cpp
+    aboutwindow.cpp \
+    editortextedit.cpp
 
 HEADERS  += mainwindow.h \
     intabtextedit.h \
@@ -30,7 +31,8 @@ HEADERS  += mainwindow.h \
     ejecutor_config.h \
     viewhtml.h \
     maineventfilter.h \
-    aboutwindow.h
+    aboutwindow.h \
+    editortextedit.h
 
 FORMS    += mainwindow.ui \
     intabtextedit.ui \

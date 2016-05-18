@@ -32,14 +32,14 @@ public:
     } myFileStatus;
     void setAllText(QString str);
     QString getAllText(void);
-    PseudoDSyntaxHighlighter* getHighlighter(void){return this->highlight;}
+    PseudoDSyntaxHighlighter* getHighlighter(void);
     QString getHTMLSource(void);
 private slots:
     void on_textEdit_textChanged();
 
 private:
     Ui::InTabTextEdit *ui;
-    PseudoDSyntaxHighlighter* highlight;
+    //PseudoDSyntaxHighlighter* highlight;
     bool editable;
     MainEventFilter *filter;
 };

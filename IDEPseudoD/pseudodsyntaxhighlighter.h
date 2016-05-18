@@ -14,10 +14,24 @@ class PseudoDSyntaxHighlighter : public QSyntaxHighlighter
 {
     Q_OBJECT
 public:
+    struct ColorOptions
+    {
+        Qt::GlobalColor keywords;
+        Qt::GlobalColor files;
+        Qt::GlobalColor classes;
+        Qt::GlobalColor functions;
+        Qt::GlobalColor types;
+        Qt::GlobalColor instanciators;
+        Qt::GlobalColor errors;
+        Qt::GlobalColor comments;
+        Qt::GlobalColor constants;
+        Qt::GlobalColor strings;
+    } colors;
     PseudoDSyntaxHighlighter(QTextDocument* parent);
     ~PseudoDSyntaxHighlighter(void);
     QStringList getFncs(void){return this->functionsLst;}
     void asHTML(QString& html);
+    void updateColorRules(void);
 protected:
     void highlightBlock(const QString &text);
 public slots:

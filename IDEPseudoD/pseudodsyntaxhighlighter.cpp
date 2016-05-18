@@ -2,49 +2,16 @@
 
 PseudoDSyntaxHighlighter::PseudoDSyntaxHighlighter(QTextDocument *parent) : QSyntaxHighlighter(parent)
 {
-    HighlightRule rule;
-    this->stringFmt.setForeground(Qt::darkGreen);
-    this->keywordFmt.setFontWeight(QFont::Bold);
-    this->keywordFmt.setForeground(Qt::darkBlue);
-    this->functionFmt.setFontItalic(true);
-    this->functionFmt.setForeground(Qt::darkCyan);
-    this->typesFmt.setFontWeight(QFont::Bold);
-    this->typesFmt.setForeground(Qt::darkCyan);
-    this->instanciatorsFmt.setForeground(Qt::blue);
-    this->commentFmt.setForeground(Qt::gray);
-    this->errorFmt.setForeground(Qt::darkRed);
-    this->constantsFmt.setForeground(Qt::darkYellow);
-    this->constantsFmt.setFontWeight(QFont::Bold);
-    this->clasesFmt.setForeground(Qt::darkGray);
-    rule.pattern = "\\b([A-Z0-9_-+]+)\\b";
-    rule.format = this->constantsFmt;
-    this->highlightTable.append(rule);
-    rule.pattern = "funcion .+";
-    rule.format = this->functionFmt;
-    this->highlightTable.append(rule);
-    rule.pattern = "clase .+";
-    rule.format = this->clasesFmt;
-    this->highlightTable.append(rule);
-    rule.pattern = "utilizar .+";
-    rule.format = this->stringFmt;
-    this->highlightTable.append(rule);
-    rule.pattern = "\\b(fijar|oper(ador)?|escribir(_esp)?|n(l|o)|funcion|sistema|llamar|clase|estructura|(in|de)crementar_p(untero)?|utilizar|sal(ir)?|ejecutar|leer|comparar(_i)?|son(_iguales)?|iguales|diferentes|sean|fin(fun|bucle)?|si((_)?no)?|heredar|mientras|redireccionar|empujar|sacar|recibir_(parametro|resultado)|enviar_parametro|crear_pila|es|devolver|Importar\\.[^ ]+)\\b";
-    rule.format = this->keywordFmt;
-    this->highlightTable.append(rule);
-    rule.pattern = "(\\b(Objeto|PseudoVariable|PseudoFuncion|PunteroInteligente|Referencia|Programa|Fraccion|Numero|Decimal|Boole|BufferTexto|BibliotecaDinamica|Iterador|IteradorDel|IteradorTra|IteradorBi|Par|#[a-zA-ZñÑ0-9_-\\(\\)\\[\\]!?]+)\\b|#\\(Final\\)\\.)";
-    rule.format = this->typesFmt;
-    this->highlightTable.append(rule);
-    rule.pattern = "\\b(adquirir|puntero|liberar|instancia)\\b";
-    rule.format = this->instanciatorsFmt;
-    this->highlightTable.append(rule);
-    rule.pattern = "\\b(estoEsUnHuevoDePascuaEnIDEPseudoD|si_no|oper(ador)?|estructura|contiene)\\b";
-    rule.format = this->errorFmt;
-    this->highlightTable.append(rule);
-    rule.pattern = " \\=\\* .+$";
-    rule.format = this->stringFmt;
-    this->highlightTable.append(rule);
-    this->commentStartExpression.setPattern("\\[");
-    this->commentEndExpression.setPattern("\\]");
+    this->colors.strings = Qt::darkGreen;
+    this->colors.keywords = Qt::darkBlue;
+    this->colors.functions = Qt::darkCyan;
+    this->colors.types = Qt::darkCyan;
+    this->colors.instanciators = Qt::blue;
+    this->colors.comments = Qt::gray;
+    this->colors.errors = Qt::darkRed;
+    this->colors.constants = Qt::darkYellow;
+    this->colors.classes = Qt::darkCyan;
+    this->updateColorRules();
     this->myTimer = new QTimer(this);
     connect(this->myTimer,SIGNAL(timeout()),this,SLOT(clearAllLists()));
     this->timerAct = false;
@@ -166,4 +133,52 @@ void PseudoDSyntaxHighlighter::asHTML(QString &html)
     // Finally retreive the syntax higlighted and formatted html.
     html = tempCursor.selection().toHtml();
     delete tempDocument;
+}
+
+void PseudoDSyntaxHighlighter::updateColorRules(void)
+{
+    this->stringFmt.setForeground(this->colors.strings);
+    this->keywordFmt.setFontWeight(QFont::Bold);
+    this->keywordFmt.setForeground(this->colors.keywords);
+    this->functionFmt.setFontItalic(true);
+    this->functionFmt.setForeground(this->colors.functions);
+    this->typesFmt.setFontWeight(QFont::Bold);
+    this->typesFmt.setForeground(this->colors.types);
+    this->instanciatorsFmt.setForeground(this->colors.instanciators);
+    this->commentFmt.setForeground(this->colors.comments);
+    this->errorFmt.setForeground(this->colors.errors);
+    this->constantsFmt.setForeground(this->colors.constants);
+    this->constantsFmt.setFontWeight(QFont::Bold);
+    this->clasesFmt.setForeground(this->colors.classes);
+    this->highlightTable.clear();
+    HighlightRule rule;
+    rule.pattern = "\\b([A-Z0-9_-+]+)\\b";
+    rule.format = this->constantsFmt;
+    this->highlightTable.append(rule);
+    rule.pattern = "funcion .+";
+    rule.format = this->functionFmt;
+    this->highlightTable.append(rule);
+    rule.pattern = "clase .+";
+    rule.format = this->clasesFmt;
+    this->highlightTable.append(rule);
+    rule.pattern = "utilizar .+";
+    rule.format = this->stringFmt;
+    this->highlightTable.append(rule);
+    rule.pattern = "\\b(fijar|oper(ador)?|escribir(_esp)?|n(l|o)|funcion|sistema|llamar|clase|estructura|(in|de)crementar_p(untero)?|utilizar|sal(ir)?|ejecutar|leer|comparar(_i)?|son(_iguales)?|iguales|diferentes|sean|fin(fun|bucle)?|si((_)?no)?|heredar|mientras|redireccionar|empujar|sacar|recibir_(parametro|resultado)|enviar_parametro|crear_pila|es|devolver|Importar\\.[^ ]+)\\b";
+    rule.format = this->keywordFmt;
+    this->highlightTable.append(rule);
+    rule.pattern = "(\\b(Objeto|PseudoVariable|PseudoFuncion|PunteroInteligente|Referencia|Programa|Fraccion|Numero|Decimal|Boole|BufferTexto|BibliotecaDinamica|Iterador|IteradorDel|IteradorTra|IteradorBi|Par|Arreglo|IteradorArreglo|#[a-zA-ZñÑ0-9_-\\(\\)\\[\\]!?]+)\\b|#\\(Final\\)\\.)";
+    rule.format = this->typesFmt;
+    this->highlightTable.append(rule);
+    rule.pattern = "\\b(adquirir|puntero|liberar|instancia)\\b";
+    rule.format = this->instanciatorsFmt;
+    this->highlightTable.append(rule);
+    rule.pattern = "\\b(estoEsUnHuevoDePascuaEnIDEPseudoD|si_no|oper(ador)?|estructura|contiene)\\b";
+    rule.format = this->errorFmt;
+    this->highlightTable.append(rule);
+    rule.pattern = " \\=\\* .+$";
+    rule.format = this->stringFmt;
+    this->highlightTable.append(rule);
+    this->commentStartExpression.setPattern("\\[");
+    this->commentEndExpression.setPattern("\\]");
 }
