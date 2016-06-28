@@ -50,6 +50,23 @@ void PseudoDSyntaxHighlighter::highlightBlock(const QString &text)
             setFormat(index, length, rule.format);
             index = expression.indexIn(text, index + length);
         }
+        char c1 = ' ', c2 = ' ';
+        int at = 0, len = 0;
+        for(int i = 0;i < text.length();i++)
+        {
+            c1 = c2;
+            c2 = text[i].toAscii();
+            // 0xC2 0xAB / 0xC2 0xBB
+            if(c2 == (char)-85)
+            {
+                at = i;
+            }
+            if(c2 == (char)-69)
+            {
+                len = i - at + 1;
+                setFormat(at, len, this->stringFmt);
+            }
+        }
     }
     foreach(const QString& fnc, functionsLst)
     {
@@ -164,7 +181,7 @@ void PseudoDSyntaxHighlighter::updateColorRules(void)
     rule.pattern = "utilizar .+";
     rule.format = this->stringFmt;
     this->highlightTable.append(rule);
-    rule.pattern = "\\b(fijar|oper(ador)?|escribir(_esp)?|n(l|o)|funcion|sistema|llamar|clase|estructura|(in|de)crementar_p(untero)?|utilizar|sal(ir)?|ejecutar|leer|comparar(_i)?|son(_iguales)?|iguales|diferentes|sean|fin(fun|bucle)?|si((_)?no)?|heredar|mientras|redireccionar|empujar|sacar|recibir_(parametro|resultado)|enviar_parametro|crear_pila|es|devolver|Importar\\.[^ ]+)\\b";
+    rule.pattern = "\\b(a|necesitas|fijar|oper(ador)?|escribir(_esp)?|n(l|o)|funcion|sistema|llamar|clase|estructura|(in|de)crementar_p(untero)?|utilizar|sal(ir)?|ejecutar|leer|comparar(_i)?|son(_iguales)?|iguales|diferentes|sean|fin(fun|bucle)?|si((_)?no)?|heredar|mientras|redireccionar|empujar|sacar|recibir_(parametro|resultado)|enviar_parametro|crear_pila|es|devolver|Importar\\.[^ ]+)\\b";
     rule.format = this->keywordFmt;
     this->highlightTable.append(rule);
     rule.pattern = "(\\b(Objeto|PseudoVariable|PseudoFuncion|PunteroInteligente|Referencia|Programa|Fraccion|Numero|Decimal|Boole|BufferTexto|BibliotecaDinamica|Iterador|IteradorDel|IteradorTra|IteradorBi|Par|Arreglo|IteradorArreglo|#[a-zA-ZñÑ0-9_-\\(\\)\\[\\]!?]+)\\b|#\\(Final\\)\\.)";
@@ -176,7 +193,7 @@ void PseudoDSyntaxHighlighter::updateColorRules(void)
     rule.pattern = "\\b(estoEsUnHuevoDePascuaEnIDEPseudoD|si_no|oper(ador)?|estructura|contiene)\\b";
     rule.format = this->errorFmt;
     this->highlightTable.append(rule);
-    rule.pattern = " \\=\\* .+$";
+    rule.pattern = "(( \\=\\* .+$)|(\\{.+\\}))";
     rule.format = this->stringFmt;
     this->highlightTable.append(rule);
     this->commentStartExpression.setPattern("\\[");
